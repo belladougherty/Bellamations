@@ -1,7 +1,6 @@
 const svgCanvas = document.getElementById('svgCanvas');
 const addCircleBtn = document.getElementById('addCircle');
 const playBtn = document.getElementById('play');
-const exportBtn = document.getElementById('export');
 
 let selectedElement = null;
 
@@ -58,11 +57,4 @@ playBtn.addEventListener('click', () => {
 
   // Apply animation
   selectedElement.style.animation = `${type}Anim ${duration}s ${repeat} linear`;
-});
-
-exportBtn.addEventListener('click', () => {
-  const serializer = new XMLSerializer();
-  const svgString = serializer.serializeToString(svgCanvas);
-  console.log(svgString);
-  alert("SVG code logged to console!");
 });
