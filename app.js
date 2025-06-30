@@ -9,7 +9,7 @@ addCircleBtn.addEventListener('click', () => {
   circle.setAttribute("cx", "200");
   circle.setAttribute("cy", "200");
   circle.setAttribute("r", "30");
-  circle.setAttribute("fill", "pink");
+  circle.setAttribute("fill", "magenta");
   svgCanvas.appendChild(circle);
   selectedElement = circle;
 });
