@@ -6,10 +6,10 @@ let selectedElement = null;
 
 addCircleBtn.addEventListener('click', () => {
   const circle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
-  circle.setAttribute("cx", "50");
-  circle.setAttribute("cy", "50");
+  circle.setAttribute("cx", "200");
+  circle.setAttribute("cy", "200");
   circle.setAttribute("r", "30");
-  circle.setAttribute("fill", "blue");
+  circle.setAttribute("fill", "pink");
   svgCanvas.appendChild(circle);
   selectedElement = circle;
 });
