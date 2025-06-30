@@ -1,0 +1,16 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+#controls {
+  margin-bottom: 20px;
+}
+
+#controls label {
+  margin-right: 10px;
+}
+
+#canvas {
+  text-align: center;
+}
