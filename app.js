@@ -44,9 +44,9 @@ playBtn.addEventListener('click', () => {
     }`;
   } else if (type === 'color') {
     keyframes = `@keyframes colorAnim {
-      0% { fill: blue; }
-      50% { fill: red; }
-      100% { fill: blue; }
+      0% { fill: magenta; }
+      50% { fill: hotpink; }
+      100% { fill: magenta; }
     }`;
   }
 
@@ -58,3 +58,14 @@ playBtn.addEventListener('click', () => {
   // Apply animation
   selectedElement.style.animation = `${type}Anim ${duration}s ${repeat} linear`;
 });
+
+// Create the falling hearts background animation
+const fallingHeartsContainer = document.getElementById('fallingHearts');
+for (let i = 0; i < 20; i++) {
+  const heart = document.createElement('div');
+  heart.classList.add('heart');
+  heart.style.left = `${Math.random() * 90}%`;
+  heart.style.animationDuration = `${2 + Math.random() * 3}s`;
+  heart.style.animationDelay = `${Math.random() * 5}s`;
+  fallingHeartsContainer.appendChild(heart);
+}
