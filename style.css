@@ -1,17 +1,56 @@
 body {
   font-family: Arial, sans-serif;
   margin: 20px;
-  background: linear-gradient(to bottom left, pink, plum);
+  background: linear-gradient(to bottom right, pink, lavender);
+}
+
+h1 {
+  text-align: center;
+  font-size: 2.5em;
+  color: #b30059;
 }
 
 #controls {
   margin-bottom: 20px;
+  text-align: center;
 }
 
 #controls label {
   margin-right: 10px;
 }
 
+#fallingHearts {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+  background: transparent;
+}
+
+.heart {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background: url('heart.jpg') no-repeat center;
+  background-size: contain;
+  animation: fall linear infinite;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(-40px) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(240px) rotate(360deg);
+    opacity: 0;
+  }
+}
+
 #canvas {
   text-align: center;
+  margin-top: 20px;
+}
+
+#svgCanvas {
+  border: 5px solid #333;
 }
